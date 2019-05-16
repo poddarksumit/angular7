@@ -1,0 +1,47 @@
+.nav-tabs .nav-link.active {
+  color: blue !important
+}
+
+li.nav-item {
+    width: 50% !important
+}
+
+.search-result {
+  height: 970px;
+  max-height: 1200px;
+  overflow-y: scroll;
+}
+
+.top-gap,.search-bar {
+  padding-top: 10px;
+}
+
+.search-bar {
+  padding-left: 50px;
+  justify-content: center;
+  align-items: center;
+}
+.search-bar-input {
+  width: 80%;
+  position: relative;
+  display: flex;
+  height: 40px;
+  text-align: center
+}
+
+.searchButton {
+  width: 40px;
+  height: 36px;
+  border: 1px solid #00B4CC;
+  background: #00B4CC;
+  text-align: center;
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.no-search-result{
+  text-align: center;
+  padding-top: 50px;
+}

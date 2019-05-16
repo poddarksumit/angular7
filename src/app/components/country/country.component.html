@@ -1,0 +1,20 @@
+<div class="card">
+    <img class="img-thumbnail card-img-top rounded mx-auto d-block" src="{{country.flag}}" alt="Flag for {{country.name}}">
+    <div class="card-block">
+        <h4 class="card-title">{{country.name}}</h4>
+        <div class="card-text">
+            <b>Capital</b>: {{country.capital}}
+        </div>
+        <div class="card-text">
+          <b>Currency</b>: 
+          <ul>
+            <li *ngFor="let currency of country.currencies">
+              {{ currency.code }}, {{ currency.name }}, {{ currency.symbol }}
+            </li>
+          </ul>
+        </div>
+        <div class="card-text">
+            <b>Current Time</b>: {{ now | date: 'MMM d, y HH:mm:ss' : country.timezones[0].replace('UTC','') }}
+        </div>
+    </div>
+</div>

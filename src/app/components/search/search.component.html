@@ -1,0 +1,31 @@
+<div class="tabs">
+  <ngb-tabset (click)="ChangeTabContent($event)">
+    <ngb-tab title="Search Country" class="nav-item-width">
+      <ng-template ngbTabContent>
+        <div class="search-bar" align="center">
+          <input type="text" name="search" autocomplete="off" 
+              class="search-bar-input border border-dark rounded" 
+              #searchBox (keyup)="searchPredictive(searchBox.value)"
+              (keyup.enter)="searchFullCountry(searchBox.value)"
+              placeholder='Press enter for exact country search'/>
+        </div>
+        </ng-template>
+    </ngb-tab>
+
+    <ngb-tab title="All Countries"  class="nav-item-width">
+        <ng-template ngbTabContent> 
+        </ng-template>
+    </ngb-tab>
+  </ngb-tabset>
+</div>
+<div class="container search-result"> 
+  <div class="row card-group" *ngIf="resultFound; else elseBlock">      
+    <app-country class="col-xs-12 col-md-4 top-gap" #thenBlock *ngFor="let country of countries; let i=index" [country]="country">
+    </app-country>
+  </div>
+  <ng-template #elseBlock><h4 class="no-search-result">No search result found.</h4></ng-template>
+</div> 
+
+             
+
+
