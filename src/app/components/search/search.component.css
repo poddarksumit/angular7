@@ -7,9 +7,9 @@ li.nav-item {
 }
 
 .search-result {
-  height: 970px;
+  min-height: 970px;
   max-height: 1200px;
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 
 .top-gap,.search-bar {
