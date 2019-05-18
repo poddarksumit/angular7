@@ -39,6 +39,7 @@ export class SearchComponent implements OnInit{
   }
 
   public GetAllCountries(){
+    this.resultFound = true;
     this.setCountries();
     this.resultFound = this.countries.length > 0;
   }
@@ -48,6 +49,7 @@ export class SearchComponent implements OnInit{
   }
 
   public searchPredictive(value: string) {
+    this.resultFound = true;
     this._countryService.getCountriesByPartialTerm(value).subscribe(countries => {
       this.countries = countries;
     },
@@ -56,6 +58,7 @@ export class SearchComponent implements OnInit{
   }
 
   public searchFullCountry(value: string) {
+    this.resultFound = true;
     try{
       this._countryService.getCountriesByFullTerm(value).subscribe(countries => {
         this.countries = countries

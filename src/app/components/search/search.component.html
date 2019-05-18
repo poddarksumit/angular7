@@ -20,7 +20,7 @@
 </div>
 <div class="container search-result"> 
   <div class="row card-group" *ngIf="resultFound; else elseBlock">      
-    <app-country class="col-xs-12 col-md-4 top-gap" #thenBlock *ngFor="let country of countries; let i=index" [country]="country">
+    <app-country class="col-xs-12 col-md-4 top-gap" #thenBlock *ngFor="let country of countries" [country]="country">
     </app-country>
   </div>
   <ng-template #elseBlock><h4 class="no-search-result">No search result found.</h4></ng-template>

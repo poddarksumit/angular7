@@ -6,9 +6,8 @@ export class Country{
   capital:string;
   currencies:Currency[];
   flag:string;
-  private _currentTime:Date;
   timezones:string[];
-  private _timezone:string;
+  timezoneNew:string;
   currentTime = new Date().getDate();
 
   get timezone() {
